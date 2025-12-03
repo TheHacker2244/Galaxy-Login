@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Estelar de Acceso</title>
+    <link rel="stylesheet" href="Style.css">
+
+
+</head>
+<body class="flex items-center justify-center p-4">
+    <div id="auth-container" class="glass-card w-full max-w-md p-8 sm:p-10 rounded-xl fade-in">
+        
+        <header class="text-center mb-10">
+            <div class="inline-block p-3 rounded-full bg-purple-600/30 mb-4 animate-pulse">
+                <i data-lucide="rocket" class="w-8 h-8 text-purple-400"></i>
+            </div>
+            <h1 class="text-4xl font-extrabold text-white tracking-tight">
+                Acceso al Portal
+            </h1>
+            <p id="form-subtitle" class="text-gray-300 mt-2">
+                Introduce tus credenciales cósmicas para iniciar la misión.
+            </p>
+        </header>
+
+        <form id="auth-form" onsubmit="handleFormSubmit(event)">
+            <div class="mb-5 relative">
+                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email de Navegación</label>
+                <div class="relative flex items-center">
+                    <i data-lucide="mail" class="absolute left-3 w-5 h-5 text-gray-400"></i>
+                    <input type="email" id="email" required placeholder="Nombre@galaxia.com"
+                           class="w-full pl-10 pr-4 py-3 bg-gray-800/50 text-white rounded-lg border border-gray-700 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition duration-300"
+                           autocomplete="off">
+                </div>
+            </div>
+
+            <div class="mb-5 relative">
+                <label for="password" class="block text-sm font-medium text-gray-300 mb-1">Clave Estelar</label>
+                <div class="relative flex items-center">
+                    <i data-lucide="lock" class="absolute left-3 w-5 h-5 text-gray-400"></i>
+                    <input type="password" id="password" required placeholder="Mínimo 8 caracteres"
+                           class="w-full pl-10 pr-4 py-3 bg-gray-800/50 text-white rounded-lg border border-gray-700 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition duration-300"
+                           autocomplete="off">
+                </div>
+            </div>
+
+            <div id="confirm-password-group" class="mb-5 relative hidden">
+                <label for="confirm-password" class="block text-sm font-medium text-gray-300 mb-1">Confirmar Clave</label>
+                <div class="relative flex items-center">
+                    <i data-lucide="check-square" class="absolute left-3 w-5 h-5 text-gray-400"></i>
+                    <input type="password" id="confirm-password" placeholder="Repite tu clave estelar"
+                           class="w-full pl-10 pr-4 py-3 bg-gray-800/50 text-white rounded-lg border border-gray-700 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition duration-300"
+                           autocomplete="off">
+                </div>
+            </div>
+            
+          
+            <div id="message-box" class="py-3 px-4 rounded-lg text-center text-sm font-medium hidden" role="alert"></div>
+
+            <button type="submit" id="submit-button"
+                    class="cta-button w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-lg mt-6 shadow-lg shadow-purple-500/50 transition duration-300">
+                Iniciar Sesión
+            </button>
+        </form>
+
+        <footer class="mt-8 text-center text-gray-400 text-sm">
+            <p id="toggle-text">
+                ¿Primera vez en esta galaxia? 
+                <button onclick="toggleMode('register')" class="text-purple-400 hover:text-purple-300 font-semibold transition duration-200 focus:outline-none">
+                    ¡Crea un nuevo tripulante!
+                </button>
+            </p>
+        </footer>
+    </div>
+</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="Scrip.js"></script>
+</html>

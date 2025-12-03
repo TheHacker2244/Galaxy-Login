@@ -1,0 +1,40 @@
+        /* Define la fuente Inter, recomendada para interfaces modernas */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Establece el fondo con la imagen de la galaxia del usuario */
+            background-image: url('pexels-picmamba-755726.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Estilo para el contenedor central del formulario */
+        .glass-card {
+            backdrop-filter: blur(15px); /* Efecto Glassmorphism */
+            background-color: rgba(255, 255, 255, 0.05); /* Fondo semitransparente muy sutil */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* Sombra más pronunciada para resaltar el formulario sobre el fondo oscuro */
+            box-shadow: 0 16px 60px 0 rgba(0, 0, 0, 0.8); 
+        }
+
+        /* Animación de entrada sutil (para hacerla épica) */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Animación de micro-movimiento para el botón */
+        .cta-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.7); /* Sombra púrpura para el hover */
+        }
